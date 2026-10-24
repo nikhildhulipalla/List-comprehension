@@ -1,0 +1,76 @@
+1.
+def squares(nums):
+    return [n ** 2 for n in nums]
+
+print("1. Squares:", squares([1, 2, 3, 4, 5]))
+
+
+ 2.
+def evens(nums):
+    return [n for n in nums if n % 2 == 0]
+
+print("2. Evens:", evens([1, 2, 3, 4, 5, 6]))
+
+3.
+def lengths(strings):
+    return [len(s) for s in strings]
+
+print("3. String Lengths:", lengths(["apple", "cat", "banana"]))
+
+
+4. 
+def replace_negatives(nums):
+    return [0 if n < 0 else n for n in nums]
+
+print("4. Replace Negatives:", replace_negatives([1, -2, 3, -4, 5]))
+
+
+5. 
+def pairs(list_a, list_b):
+    return [(a, b) for a in list_a for b in list_b]
+
+print("5. Cartesian Pairs:", pairs([1, 2], ["a", "b"]))
+
+
+ 6. 
+def flatten(matrix):
+    return [item for row in matrix for item in row]
+
+print("6. Flatten:", flatten([[1, 2], [3, 4], [5, 6]]))
+
+
+7.
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def primes(nums):
+    return [n for n in nums if is_prime(n)]
+
+print("7. Primes:", primes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
+
+
+8.
+def unique_chars(strings):
+    return list(dict.fromkeys(ch for s in strings for ch in s))
+
+print("8. Unique Characters:", unique_chars(["hello", "world"]))
+
+
+9.
+def weighted_sum(pairs):
+    return [value * weight for value, weight in pairs]
+
+print("9. Weighted Sum:", weighted_sum([(2, 3), (4, 5), (6, 2)]))
+
+
+10.
+def matrix_transpose(matrix):
+    return [[row[i] for row in matrix] for i in range(len(matrix[0]))] if matrix else []
+
+print("10. Matrix Transpose:", matrix_transpose([[1, 2, 3], [4, 5, 6]]))
